@@ -1,8 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
-import categoryMenuReducer from './components/CategoryMenu/categoryMenuSlice';
+import { createStore } from '@reduxjs/toolkit';
+import reducer from './utils/reducers';
 
-export default configureStore({
-    reducer: {
-        categoryMenu: categoryMenuReducer
-    },
-});
+const store = createStore(reducer);
+
+export default store;
